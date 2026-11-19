@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strategic Latitudes — Political, Geographic &amp; Cultural Advisory</title>
+  <meta name="description" content="Strategic Latitudes advises federal agencies, members of Congress, and private-sector partners at the intersection of politics, geography, and institutional culture." />
+  <meta property="og:title" content="Strategic Latitudes — Making the intersection of politics and geography work for you." />
+  <meta property="og:description" content="Bipartisan political, geographic, and cultural advisory based in Washington, D.C." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/denali-horizon-hero.jpg" />
+  <link rel="icon" type="image/png" href="assets/logo-globe-mark.png" />
+  <style>
+    @font-face {
+      font-family: 'Belwe';
+      src: url('assets/fonts/Belwe-Bold.otf') format('opentype'), local('Belwe Bold');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Belwe';
+      src: url('assets/fonts/Belwe-Regular.ttf') format('truetype'), local('Belwe');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Belwe Light';
+      src: url('assets/fonts/Belwe-Light.otf') format('opentype'), local('Belwe Light');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --midnight: #07131F;
+      --deep-navy: #0B1C2D;
+      --brand-navy: #102F4E;
+      --meridian: #81C4DE;
+      --brass: #C89652;
+      --dark-rule: rgba(129, 196, 222, 0.16);
+      --ink-light: #F2F6FA;
+      --ink-muted: #A9BFD4;
+      --font-display: 'Belwe', Georgia, 'Times New Roman', serif;
+      --font-display-light: 'Belwe Light', 'Belwe', Georgia, serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --max-w: 1140px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; overflow-x: clip; }
+    body {
+      margin: 0;
+      background: var(--midnight);
+      color: var(--ink-light);
+      font-family: var(--font-sans);
+      line-height: 1.62;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
+    }
+
+    section[id] { scroll-margin-top: 80px; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--meridian);
+      margin: 0 0 14px 0;
+    }
+    .eyebrow.brass { color: var(--brass); }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(26px, 3.2vw, 39px);
+      line-height: 1.14;
+      margin: 0;
+      color: #FFFFFF;
+    }
+
+    /* ============================================================
+       NAVIGATION — SIDE-BY-SIDE ORIGINAL GLOBE + BELWE WORDMARK
+       ============================================================ */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(7, 19, 31, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--dark-rule);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+      gap: 20px;
+    }
+    .brand-lockup {
+      display: inline-flex;
+      align-items: center;
+      gap: 13px;
+      flex-shrink: 0;
+    }
+    .brand-lockup img { height: 39px; width: auto; }
+    .brand-wordmark {
+      display: flex;
+      flex-direction: column;
+      line-height: 0.94;
+    }
+    .brand-wordmark .w-top {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 22px;
+      color: #FFFFFF;
+      letter-spacing: -0.015em;
+    }
+    .brand-wordmark .w-bot {
+      font-family: var(--font-display-light);
+      font-weight: 300;
+      font-size: 20px;
+      color: var(--meridian);
+      letter-spacing: 0.08em;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 13.5px;
+      color: #C3D5E6;
+    }
+    .nav-links a { transition: color 0.18s ease; }
+    .nav-links a:hover { color: #FFFFFF; }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .nav-menu-btn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: 1px solid rgba(129, 196, 222, 0.28);
+      border-radius: 3px;
+      color: #E3EFF8;
+      cursor: pointer;
+      padding: 0;
+    }
+    .nav-menu-btn svg { width: 18px; height: 18px; }
+    .mobile-drawer {
+      display: none;
+      background: #07131F;
+      border-top: 1px solid var(--dark-rule);
+      padding: 12px 0 20px;
+    }
+    .mobile-drawer.is-open { display: block; }
+    .mobile-drawer-links {
+      display: flex;
+      flex-direction: column;
+    }
+    .mobile-drawer-links a {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--dark-rule);
+      font-size: 15px;
+      color: #D7E6F4;
+    }
+    .mobile-drawer-links a:last-child { border-bottom: none; }
+    .mobile-drawer-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .mobile-drawer-actions .btn { flex: 1; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: 3px;
+      transition: all 0.18s ease;
+      cursor: pointer;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+    .btn-primary { background: var(--meridian); color: #071421; }
+    .btn-primary:hover { background: #9BD4EA; }
+    .btn-outline { border-color: rgba(200, 150, 82, 0.55); color: #F0D9B5; background: transparent; }
+    .btn-outline:hover { background: rgba(200, 150, 82, 0.14); border-color: var(--brass); }
+    .btn-ghost-light { border-color: rgba(129, 196, 222, 0.36); color: #E3EFF8; background: transparent; }
+    .btn-ghost-light:hover { border-color: var(--meridian); background: rgba(129, 196, 222, 0.08); }
+
+    /* ============================================================
+       CHAPTER 1: HERO — DENALI HORIZON + FOUNDING JUDGMENT UP TOP
+       ============================================================ */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--midnight);
+      min-height: 670px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(95deg, rgba(7, 19, 31, 0.94) 0%, rgba(7, 19, 31, 0.78) 48%, rgba(7, 19, 31, 0.34) 78%, rgba(7, 19, 31, 0.55) 100%),
+        linear-gradient(180deg, rgba(7, 19, 31, 0.55) 0%, rgba(7, 19, 31, 0.08) 40%, rgba(7, 19, 31, 0.96) 100%),
+        url('assets/denali-horizon-hero.jpg');
+      background-size: cover;
+      background-position: 62% 48%;
+      z-index: 0;
+    }
+    .hero-topo { position: absolute; inset: 0; z-index: 1; pointer-events: none; opacity: 0.2; }
+    .hero-content { position: relative; z-index: 2; padding: 84px 0 60px; }
+    .hero-copy { max-width: 675px; }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(32px, 4.7vw, 54px);
+      line-height: 1.09;
+      margin: 0 0 22px 0;
+      color: #FFFFFF;
+      letter-spacing: -0.015em;
+    }
+    .hero-stance {
+      font-family: var(--font-display-light);
+      font-weight: 300;
+      font-size: clamp(18px, 2.2vw, 23px);
+      line-height: 1.4;
+      color: #E8C794;
+      margin: 0 0 20px 0;
+      max-width: 605px;
+    }
+    .hero-lead {
+      font-size: 16px;
+      line-height: 1.66;
+      color: #C7D9E9;
+      margin: 0 0 32px 0;
+      max-width: 585px;
+    }
+    .hero-cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .hero-cta-row .btn { padding: 13px 22px; font-size: 14px; }
+
+    .hero-strip {
+      position: relative;
+      z-index: 2;
+      border-top: 1px solid var(--dark-rule);
+      background: rgba(7, 19, 31, 0.8);
+      backdrop-filter: blur(8px);
+    }
+    .strip-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .strip-cell { padding: 18px 20px; border-right: 1px solid rgba(129, 196, 222, 0.12); }
+    .strip-cell:first-child { padding-left: 0; }
+    .strip-cell:last-child { border-right: none; }
+    .strip-k {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--meridian);
+      margin-bottom: 4px;
+    }
+    .strip-v { font-size: 13.5px; color: #EAF2F9; font-weight: 500; }
+
+    /* ============================================================
+       CHAPTER 2: THE PREMISE (CLEAN EDITORIAL SPLIT)
+       ============================================================ */
+    .section-dark {
+      background: var(--deep-navy);
+      padding: 88px 0;
+      border-top: 1px solid var(--dark-rule);
+    }
+    .premise-layout {
+      display: grid;
+      grid-template-columns: 1.04fr 0.96fr;
+      gap: 54px;
+      align-items: center;
+    }
+    .photo-plate { margin: 0; }
+    .photo-plate img {
+      width: 100%;
+      height: 410px;
+      object-fit: cover;
+      border-radius: 2px;
+      border: 1px solid rgba(129, 196, 222, 0.18);
+    }
+    .photo-plate figcaption {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+      padding-top: 10px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: #7FA2BC;
+    }
+    .premise-intro { font-size: 15.8px; line-height: 1.68; color: var(--ink-muted); margin: 16px 0 30px 0; }
+    .premise-intro strong { color: #FFFFFF; font-weight: 600; }
+    .editorial-list { border-top: 1px solid var(--dark-rule); }
+    .editorial-row { padding: 20px 0; border-bottom: 1px solid var(--dark-rule); }
+    .editorial-row-k {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--meridian);
+      margin-bottom: 5px;
+    }
+    .editorial-row-k.brass { color: var(--brass); }
+    .editorial-row h3 { font-family: var(--font-display); font-weight: 700; font-size: 19px; margin: 0 0 5px 0; color: #FFFFFF; }
+    .editorial-row p { margin: 0; font-size: 14px; color: var(--ink-muted); line-height: 1.58; }
+
+    /* ============================================================
+       CHAPTER 3: THREE LENSES (ARCHITECTURAL HAIRLINE LEDGER)
+       ============================================================ */
+    .section-command {
+      background: #091726;
+      padding: 88px 0;
+      border-top: 1px solid var(--dark-rule);
+    }
+    .section-head-split {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 28px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+    .section-sub { max-width: 450px; font-size: 14.8px; color: var(--ink-muted); margin: 0; }
+    .corridor-visual {
+      border-top: 1px solid var(--dark-rule);
+      border-bottom: 1px solid var(--dark-rule);
+      padding: 22px 0 18px;
+      margin-bottom: 36px;
+    }
+    .corridor-bar {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: #7FA2BC;
+      margin-bottom: 8px;
+    }
+    .corridor-mobile { display: none; }
+    .corridor-node {
+      display: grid;
+      grid-template-columns: 18px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 12px 0;
+      position: relative;
+    }
+    .corridor-node:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 26px;
+      bottom: -8px;
+      width: 1px;
+      background: linear-gradient(180deg, rgba(129, 196, 222, 0.5), rgba(200, 150, 82, 0.55));
+    }
+    .c-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      margin-top: 4px;
+      background: #091726;
+      border: 2px solid var(--meridian);
+    }
+    .c-dot.brass { border-color: var(--brass); }
+    .c-dot.solid { background: var(--meridian); }
+    .c-node-k {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--meridian);
+      margin-bottom: 2px;
+    }
+    .c-node-k.brass { color: #E8C794; }
+    .c-node-v { font-size: 13.5px; color: #EAF2F9; margin: 0; }
+
+    .lenses-ledger { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .lens-col { padding: 4px 28px 4px 0; border-right: 1px solid var(--dark-rule); }
+    .lens-col:not(:first-child) { padding-left: 28px; }
+    .lens-col:last-child { border-right: none; padding-right: 0; }
+    .lens-num { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.14em; color: var(--meridian); margin-bottom: 10px; }
+    .lens-num.brass { color: var(--brass); }
+    .lens-col h3 { font-family: var(--font-display); font-weight: 700; font-size: 21px; margin: 0 0 10px 0; color: #FFFFFF; }
+    .lens-col p { font-size: 14.2px; color: var(--ink-muted); margin: 0; line-height: 1.62; }
+
+    /* ============================================================
+       CHAPTER 4: LEADERSHIP & INTERACTIVE ROTATING GLOBE (DARK COMMAND NAVY)
+       ============================================================ */
+    .section-globe {
+      background: radial-gradient(circle at 74% 62%, rgba(22, 58, 92, 0.34), transparent 52%), #07131F;
+      padding: 96px 0;
+      border-top: 1px solid var(--dark-rule);
+    }
+    .founder-intro-row {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 48px;
+      align-items: end;
+      padding-bottom: 44px;
+      border-bottom: 1px solid var(--dark-rule);
+      margin-bottom: 48px;
+    }
+    .founder-intro-copy p {
+      font-size: 16px;
+      line-height: 1.72;
+      color: var(--ink-muted);
+      margin: 18px 0 0 0;
+      max-width: 680px;
+    }
+    .founder-intro-copy strong { color: #FFFFFF; }
+
+    .founder-portrait-mini {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 16px 18px;
+      border: 1px solid var(--dark-rule);
+      background: rgba(11, 28, 45, 0.56);
+      border-radius: 2px;
+    }
+    .mini-avatar {
+      width: 68px;
+      height: 68px;
+      flex-shrink: 0;
+      background: #0B1C2D;
+      border: 1px solid rgba(129, 196, 222, 0.28);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+    .mini-avatar img { width: 100%; height: auto; }
+    .mini-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 18px;
+      color: #FFFFFF;
+      margin: 0 0 2px 0;
+    }
+    .mini-role {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin: 0 0 4px 0;
+    }
+    .mini-note {
+      font-size: 12px;
+      color: #8CA5BD;
+      margin: 0;
+    }
+
+    /* Interactive Left List + Right Rotating Globe */
+    .globe-stage {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .globe-chapter-list {
+      border-top: 1px solid var(--dark-rule);
+    }
+    .globe-chapter {
+      border-bottom: 1px solid var(--dark-rule);
+      transition: background 0.18s ease;
+    }
+    .globe-chapter.is-active {
+      background: rgba(16, 47, 78, 0.26);
+    }
+    .chapter-trigger {
+      width: 100%;
+      background: transparent;
+      border: none;
+      color: inherit;
+      font-family: inherit;
+      display: grid;
+      grid-template-columns: 32px 1fr 20px;
+      gap: 12px;
+      align-items: baseline;
+      text-align: left;
+      padding: 18px 14px;
+      cursor: pointer;
+    }
+    .ch-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: #6E8BA5;
+    }
+    .globe-chapter.is-active .ch-num {
+      color: var(--brass);
+      font-weight: 600;
+    }
+    .ch-head { display: flex; flex-direction: column; gap: 3px; }
+    .ch-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 19px;
+      color: #C7D8E8;
+      transition: color 0.15s ease;
+    }
+    .globe-chapter:hover .ch-title,
+    .globe-chapter.is-active .ch-title { color: #FFFFFF; }
+    .ch-sub {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #708CA6;
+    }
+    .globe-chapter.is-active .ch-sub { color: var(--meridian); }
+    .ch-indicator {
+      font-family: var(--font-mono);
+      font-size: 14px;
+      color: #6E8BA5;
+      text-align: right;
+    }
+    .globe-chapter.is-active .ch-indicator { color: var(--brass); }
+
+    .chapter-body {
+      padding: 0 14px 20px 58px;
+    }
+    .chapter-body p {
+      font-size: 14px;
+      line-height: 1.62;
+      color: var(--ink-muted);
+      margin: 0 0 14px 0;
+    }
+    .chapter-pins {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+    .pin-pill {
+      background: rgba(7, 19, 31, 0.72);
+      border: 1px solid rgba(129, 196, 222, 0.28);
+      color: #CFE2F1;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      letter-spacing: 0.06em;
+      padding: 6px 11px;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .pin-pill:hover {
+      border-color: var(--meridian);
+      color: #FFFFFF;
+    }
+    .pin-pill.is-focused {
+      background: rgba(200, 150, 82, 0.16);
+      border-color: var(--brass);
+      color: #F4DEC0;
+    }
+
+    /* Right Column: Cartographic Globe Display */
+    .globe-viewport {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      min-width: 0;
+    }
+    .globe-telemetry {
+      width: 100%;
+      max-width: 520px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--dark-rule);
+      margin-bottom: 12px;
+    }
+    .tel-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 16px;
+      color: #FFFFFF;
+    }
+    .tel-coord {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.11em;
+      color: var(--meridian);
+    }
+    .globe-canvas-wrap {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      cursor: grab;
+    }
+    .globe-canvas-wrap:active { cursor: grabbing; }
+    #slGlobeCanvas { touch-action: none; display: block; max-width: 100%; }
+    .globe-caption {
+      width: 100%;
+      max-width: 520px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 4px 12px;
+      padding-top: 10px;
+      border-top: 1px solid var(--dark-rule);
+      margin-top: 8px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #708CA6;
+    }
+
+    /* ============================================================
+       CHAPTER 5: WHO WE ADVISE (CAPITOL DUSK PLATE + HAIRLINE COLUMNS)
+       ============================================================ */
+    .section-washington {
+      background: var(--deep-navy);
+      padding-bottom: 88px;
+      border-top: 1px solid var(--dark-rule);
+    }
+    .dc-banner {
+      position: relative;
+      min-height: 295px;
+      background-image:
+        linear-gradient(180deg, rgba(11, 28, 45, 0.32) 0%, rgba(11, 28, 45, 0.72) 66%, #0B1C2D 100%),
+        url('assets/capitol-dusk-editorial.jpg');
+      background-size: cover;
+      background-position: center 45%;
+      display: flex;
+      align-items: flex-end;
+      padding: 56px 0 34px;
+    }
+    .audience-ledger {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 28px;
+      border-top: 1px solid var(--dark-rule);
+      padding-top: 32px;
+    }
+    .aud-col { padding: 0 28px 0 0; border-right: 1px solid var(--dark-rule); }
+    .aud-col:not(:first-child) { padding-left: 28px; }
+    .aud-col:last-child { border-right: none; padding-right: 0; }
+    .aud-tag {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 10px;
+    }
+    .aud-col h3 { font-family: var(--font-display); font-weight: 700; font-size: 21px; margin: 0 0 10px 0; color: #FFFFFF; line-height: 1.24; }
+    .aud-col p { font-size: 14.2px; color: var(--ink-muted); margin: 0; line-height: 1.62; }
+
+    /* ============================================================
+       CHAPTER 6: HOW WE WORK + SUBSTACK DISPATCHES
+       ============================================================ */
+    .section-dispatches {
+      background: #091726;
+      padding: 86px 0;
+      border-top: 1px solid var(--dark-rule);
+    }
+    .cadence-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin: 34px 0 68px; }
+    .step-col { border-top: 1px solid rgba(129, 196, 222, 0.32); padding-top: 18px; }
+    .step-num { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.14em; color: var(--meridian); margin-bottom: 8px; }
+    .step-col h4 { font-family: var(--font-display); font-weight: 700; font-size: 19.5px; margin: 0 0 8px 0; color: #FFFFFF; }
+    .step-col p { font-size: 14px; color: var(--ink-muted); margin: 0; line-height: 1.6; }
+
+    .substack-band {
+      border-top: 1px solid rgba(200, 150, 82, 0.45);
+      border-bottom: 1px solid rgba(200, 150, 82, 0.25);
+      padding: 42px 0;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 44px;
+      align-items: center;
+    }
+    .substack-band h3 { font-family: var(--font-display); font-weight: 700; font-size: clamp(23px, 2.5vw, 28px); line-height: 1.18; margin: 0 0 12px 0; color: #FFFFFF; }
+    .substack-band p { font-size: 15px; color: #C3D6E7; margin: 0 0 24px 0; line-height: 1.64; }
+    .dispatch-list { border-top: 1px solid var(--dark-rule); }
+    .dispatch-item { padding: 15px 0; border-bottom: 1px solid var(--dark-rule); }
+    .dispatch-meta { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brass); margin-bottom: 4px; }
+    .dispatch-title { font-family: var(--font-display); font-size: 15px; color: #EEF5FB; margin: 0; }
+
+    /* ============================================================
+       CHAPTER 7: GET IN TOUCH + FOOTER
+       ============================================================ */
+    .section-contact {
+      background: var(--midnight);
+      padding: 86px 0 72px;
+      border-top: 1px solid var(--dark-rule);
+    }
+    .contact-grid { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 56px; align-items: start; }
+    .contact-info p { font-size: 15.5px; color: var(--ink-muted); margin: 16px 0 26px 0; line-height: 1.68; }
+    .contact-links { display: flex; flex-direction: column; gap: 10px; font-family: var(--font-mono); font-size: 12.5px; color: #D5E5F2; word-break: break-word; }
+    .contact-links a { color: var(--meridian); text-decoration: underline; text-underline-offset: 4px; }
+    .contact-form { border-top: 1px solid var(--dark-rule); padding-top: 24px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+    .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+    .form-row .field { margin-bottom: 0; }
+    label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--meridian); }
+    input, textarea, select {
+      background: rgba(11, 28, 45, 0.78);
+      border: 1px solid rgba(129, 196, 222, 0.22);
+      border-radius: 2px;
+      padding: 11px 13px;
+      color: #FFFFFF;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      outline: none;
+      width: 100%;
+      transition: border-color 0.18s ease;
+    }
+    input:focus, textarea:focus, select:focus { border-color: var(--meridian); }
+    textarea { min-height: 104px; resize: vertical; }
+    .form-note { font-size: 12px; color: #8CA5BD; margin: 12px 0 0 0; }
+    .form-success { display: none; margin-top: 14px; padding: 12px 14px; border: 1px solid rgba(129, 196, 222, 0.45); color: #EAF5FB; font-size: 13.5px; }
+
+    footer { background: #050E17; border-top: 1px solid rgba(129, 196, 222, 0.12); padding: 28px 0; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px 18px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: #7D97B0;
+    }
+
+    /* ============================================================
+       RESPONSIVE BREAKPOINTS (TABLET & MOBILE)
+       ============================================================ */
+    @media (max-width: 960px) {
+      .nav-links { display: none; }
+      .nav-menu-btn { display: inline-flex; }
+
+      .strip-grid { grid-template-columns: repeat(2, 1fr); }
+      .strip-cell { padding: 16px 18px 16px 0; border-right: none; border-bottom: 1px solid var(--dark-rule); }
+      .strip-cell:nth-child(odd) { padding-right: 20px; border-right: 1px solid var(--dark-rule); }
+      .strip-cell:nth-child(even) { padding-left: 20px; }
+      .strip-cell:nth-last-child(-n+2) { border-bottom: none; }
+
+      .premise-layout, .lenses-ledger,
+      .founder-intro-row, .globe-stage,
+      .audience-ledger, .cadence-row, .substack-band,
+      .contact-grid, .form-row {
+        grid-template-columns: 1fr;
+      }
+      .premise-layout { gap: 36px; }
+      .founder-intro-row { gap: 28px; padding-bottom: 32px; margin-bottom: 36px; }
+      .globe-stage { gap: 32px; }
+      .globe-viewport { order: -1; }
+
+      .lens-col, .aud-col {
+        border-right: none;
+        padding: 18px 0;
+        border-bottom: 1px solid var(--dark-rule);
+      }
+      .lens-col:not(:first-child), .aud-col:not(:first-child) { padding-left: 0; }
+      .lens-col:last-child, .aud-col:last-child { border-bottom: none; padding-bottom: 0; }
+      .cadence-row { gap: 24px; margin: 28px 0 48px; }
+      .contact-grid { gap: 36px; }
+    }
+
+    @media (max-width: 640px) {
+      .container { padding: 0 18px; }
+      .nav-inner { height: 66px; gap: 10px; }
+      .brand-lockup { gap: 10px; }
+      .brand-lockup img { height: 31px; }
+      .brand-wordmark .w-top { font-size: 18px; }
+      .brand-wordmark .w-bot { font-size: 16.5px; }
+      .nav-substack-btn { display: none; }
+      .nav-actions .btn { padding: 8px 13px; font-size: 12.5px; }
+
+      .hero { min-height: auto; }
+      .hero-bg {
+        background-image:
+          linear-gradient(180deg, rgba(7, 19, 31, 0.84) 0%, rgba(7, 19, 31, 0.72) 55%, rgba(7, 19, 31, 0.96) 100%),
+          url('assets/denali-horizon-hero.jpg');
+        background-position: center 35%;
+      }
+      .hero-content { padding: 48px 0 38px; }
+      .hero .eyebrow { font-size: 10px; letter-spacing: 0.12em; }
+      .hero-lead { font-size: 15px; margin-bottom: 26px; }
+      .hero-cta-row { flex-direction: column; align-items: stretch; }
+      .hero-cta-row .btn { width: 100%; justify-content: center; }
+
+      .strip-grid { grid-template-columns: 1fr; }
+      .strip-cell,
+      .strip-cell:nth-child(odd),
+      .strip-cell:nth-child(even) {
+        padding: 14px 0;
+        border-right: none;
+        border-bottom: 1px solid var(--dark-rule);
+      }
+      .strip-cell:last-child { border-bottom: none; }
+
+      .section-dark, .section-command, .section-globe, .section-dispatches, .section-contact {
+        padding: 62px 0;
+      }
+      .section-washington { padding-bottom: 62px; }
+      .photo-plate img { height: 255px; }
+
+      .corridor-svg-desktop { display: none; }
+      .corridor-mobile { display: block; margin-top: 8px; }
+
+      .chapter-trigger {
+        grid-template-columns: 26px 1fr 18px;
+        gap: 10px;
+        padding: 15px 10px;
+      }
+      .ch-title { font-size: 17.5px; }
+      .chapter-body { padding: 0 12px 18px 12px; }
+
+      .dc-banner { min-height: 225px; padding: 44px 0 24px; }
+      .audience-ledger { margin-top: 12px; padding-top: 16px; }
+      .substack-band { padding: 32px 0; gap: 30px; }
+      .substack-band .btn { width: 100%; }
+
+      /* Prevent iOS Safari zoom on input focus */
+      input, textarea, select { font-size: 16px; }
+
+      .footer-inner { flex-direction: column; align-items: flex-start; gap: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION: SIDE-BY-SIDE ORIGINAL GLOBE + BELWE WORDMARK -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="#top" class="brand-lockup" aria-label="Strategic Latitudes Home">
+        <img src="assets/logo-globe-mark.png" alt="Strategic Latitudes globe emblem" />
+        <span class="brand-wordmark">
+          <span class="w-top">strategic</span>
+          <span class="w-bot">latitudes</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#premise">The Premise</a>
+        <a href="#framework">Three Lenses</a>
+        <a href="#leadership">Global Track Record</a>
+        <a href="#who-we-advise">Who We Advise</a>
+        <a href="#dispatches">Substack</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://strategiclatitudes.substack.com" target="_blank" rel="noopener" class="btn btn-outline nav-substack-btn">Substack ↗</a>
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        <button type="button" class="nav-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <line x1="4" y1="7" x2="20" y2="7" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="17" x2="20" y2="17" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="container">
+        <nav class="mobile-drawer-links" aria-label="Mobile Navigation">
+          <a href="#premise">The Premise</a>
+          <a href="#framework">Three Lenses</a>
+          <a href="#leadership">Global Track Record</a>
+          <a href="#who-we-advise">Who We Advise</a>
+          <a href="#dispatches">How We Work &amp; Substack</a>
+        </nav>
+        <div class="mobile-drawer-actions">
+          <a href="https://strategiclatitudes.substack.com" target="_blank" rel="noopener" class="btn btn-outline">Substack ↗</a>
+          <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CHAPTER 1: HERO — DENALI HORIZON + FOUNDING JUDGMENT UP TOP -->
+  <section id="top" class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+
+    <svg class="hero-topo" viewBox="0 0 1440 720" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g fill="none" stroke="#81C4DE" stroke-width="1">
+        <line x1="0" y1="145" x2="1440" y2="145" stroke-dasharray="4 8" opacity="0.5"/>
+        <line x1="0" y1="360" x2="1440" y2="360" stroke-dasharray="2 10" opacity="0.35"/>
+        <line x1="0" y1="560" x2="1440" y2="560" stroke-dasharray="4 8" opacity="0.4"/>
+        <path d="M 620 720 Q 820 500 1010 470 T 1440 310" opacity="0.45"/>
+        <path d="M 540 720 Q 790 440 1020 405 T 1440 240" opacity="0.3"/>
+      </g>
+    </svg>
+
+    <div class="container hero-content">
+      <div class="hero-copy">
+        <p class="eyebrow">63°04′ N · Denali &nbsp;—&nbsp; 38°53′ N · Capitol Hill</p>
+        <h1>Making the intersection of politics and geography work for you.</h1>
+        <p class="hero-stance">
+          Knowing when to hold firm, when to move forward, and when to yield—because terrain sets the rules, and people decide the outcome.
+        </p>
+        <p class="hero-lead">
+          Strategic Latitudes advises federal agencies, members of Congress, and the companies and advisory groups working alongside them—mapping how history, resources, ambition, and culture move decisions in Washington and beyond.
+        </p>
+        <div class="hero-cta-row">
+          <a href="#contact" class="btn btn-primary">Get in Touch</a>
+          <a href="https://strategiclatitudes.substack.com" target="_blank" rel="noopener" class="btn btn-outline">Read Dispatches on Substack ↗</a>
+          <a href="#premise" class="btn btn-ghost-light">Read the Story ↓</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-strip">
+      <div class="container strip-grid">
+        <div class="strip-cell">
+          <div class="strip-k">Mandate</div>
+          <div class="strip-v">Bipartisan Federal &amp; Commercial Advisory</div>
+        </div>
+        <div class="strip-cell">
+          <div class="strip-k">Public Sector</div>
+          <div class="strip-v">U.S. Senate · House · Federal Agencies</div>
+        </div>
+        <div class="strip-cell">
+          <div class="strip-k">Discipline</div>
+          <div class="strip-v">Geopolitics · Flows · Applied Anthropology</div>
+        </div>
+        <div class="strip-cell">
+          <div class="strip-k">Base</div>
+          <div class="strip-v">Washington, D.C. &amp; Global Corridors</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 2: THE PREMISE (CLEAN EDITORIAL SPLIT) -->
+  <section id="premise" class="section-dark">
+    <div class="container premise-layout">
+      <figure class="photo-plate">
+        <img src="assets/corridor-flows-aerial.jpg" alt="Northern maritime corridor winding between snow-dusted peaks toward a port at dusk" />
+        <figcaption>
+          <span>Point A → Point B · Corridors &amp; Resources</span>
+          <span>59°N · Maritime Passage</span>
+        </figcaption>
+      </figure>
+
+      <div>
+        <p class="eyebrow">01 · The Premise</p>
+        <h2 class="section-title">Read the terrain. Understand the people on it.</h2>
+        <p class="premise-intro">
+          Policy never moves in a vacuum. Every appropriation, corridor, and alliance is shaped by <strong>where resources travel</strong> and <strong>who holds leverage along the way.</strong>
+        </p>
+
+        <div class="editorial-list">
+          <div class="editorial-row">
+            <div class="editorial-row-k">The Terrain &amp; The Flow</div>
+            <h3>How things actually move from Point A to Point B</h3>
+            <p>History, borders, choke points, and natural resources define the real constraints long before a bill or contract hits the table.</p>
+          </div>
+          <div class="editorial-row">
+            <div class="editorial-row-k brass">The Leaders &amp; The Culture</div>
+            <h3>How trust is earned across different rooms</h3>
+            <p>Parties, agency rivalries, personal ambitions, and unwritten cultural norms—reading the human anthropology behind every negotiation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 3: THREE LENSES (ARCHITECTURAL HAIRLINE LEDGER) -->
+  <section id="framework" class="section-command">
+    <div class="container">
+      <div class="section-head-split">
+        <div>
+          <p class="eyebrow">02 · The Framework</p>
+          <h2 class="section-title">Three lenses on every decision.</h2>
+        </div>
+        <p class="section-sub">
+          Every serious geopolitical or federal initiative moves across three layers simultaneously: physical reality, political power, and human culture.
+        </p>
+      </div>
+
+      <div class="corridor-visual">
+        <div class="corridor-bar">
+          <span>Spatial &amp; Stakeholder Mapping · Point A → Point B</span>
+          <span>Terrain · Resources · Power · Culture</span>
+        </div>
+
+        <!-- Desktop & Tablet Spatial Corridor Diagram -->
+        <svg class="corridor-svg-desktop" viewBox="0 0 1060 165" width="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Corridor flow diagram connecting geography, friction points, and Washington decision makers">
+          <g stroke="#81C4DE" stroke-opacity="0.14" fill="none" stroke-width="1">
+            <line x1="0" y1="32" x2="1060" y2="32"/>
+            <line x1="0" y1="82" x2="1060" y2="82"/>
+            <line x1="0" y1="132" x2="1060" y2="132"/>
+            <path d="M 160 0 Q 175 82 160 165"/>
+            <path d="M 410 0 Q 422 82 410 165"/>
+            <path d="M 650 0 Q 638 82 650 165"/>
+            <path d="M 890 0 Q 876 82 890 165"/>
+          </g>
+          <path d="M 0 150 Q 140 106 265 126 T 520 92 T 780 118 T 1060 84" fill="none" stroke="#81C4DE" stroke-opacity="0.22" stroke-width="1.2"/>
+          <path d="M 80 114 Q 280 40 520 75 T 965 54" fill="none" stroke="#81C4DE" stroke-width="2.2"/>
+          <path d="M 80 114 Q 310 144 520 75 T 965 110" fill="none" stroke="#C89652" stroke-width="1.7" stroke-dasharray="5 5"/>
+          <circle cx="80" cy="114" r="5.5" fill="#091726" stroke="#81C4DE" stroke-width="2.3"/>
+          <circle cx="520" cy="75" r="6.5" fill="#091726" stroke="#C89652" stroke-width="2.3"/>
+          <circle cx="965" cy="54" r="5.5" fill="#81C4DE"/>
+          <circle cx="965" cy="110" r="4.5" fill="#C89652"/>
+          <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" letter-spacing="0.08em">
+            <text x="64" y="144" fill="#81C4DE">POINT A · TERRAIN &amp; RESOURCES</text>
+            <text x="418" y="52" fill="#E8C794">CONFLICTS · CULTURES · CHOKE POINTS</text>
+            <text x="774" y="36" fill="#FFFFFF">POINT B · FEDERAL &amp; HILL ALIGNMENT</text>
+            <text x="794" y="136" fill="#C89652">DURABLE RELATIONSHIPS</text>
+          </g>
+        </svg>
+
+        <!-- Mobile-Legible Corridor Progression -->
+        <div class="corridor-mobile" aria-label="Corridor flow progression">
+          <div class="corridor-node">
+            <span class="c-dot"></span>
+            <div>
+              <div class="c-node-k">Point A · Terrain &amp; Resources</div>
+              <p class="c-node-v">Physical geography, borders, supply routes, and natural assets.</p>
+            </div>
+          </div>
+          <div class="corridor-node">
+            <span class="c-dot brass"></span>
+            <div>
+              <div class="c-node-k brass">Friction · Conflicts, Cultures &amp; Choke Points</div>
+              <p class="c-node-v">Competing priorities, unwritten norms, and institutional leverage.</p>
+            </div>
+          </div>
+          <div class="corridor-node">
+            <span class="c-dot solid"></span>
+            <div>
+              <div class="c-node-k">Point B · Federal &amp; Hill Alignment</div>
+              <p class="c-node-v">Durable bipartisan relationships across agencies, Congress, and industry.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lenses-ledger">
+        <div class="lens-col">
+          <div class="lens-num">LENS I · SPATIAL</div>
+          <h3>Geography &amp; Flows</h3>
+          <p>How history, location, natural resources, logistics corridors, and choke points determine the real cost—and real leverage—of moving goods, capital, or policy from Point A to Point B.</p>
+        </div>
+        <div class="lens-col">
+          <div class="lens-num">LENS II · POLITICAL</div>
+          <h3>Power, Ambition &amp; Timing</h3>
+          <p>Understanding leaders, parties, committees, agencies, and their underlying goals—paired with seasoned judgment on when to press an opening and when to yield ground.</p>
+        </div>
+        <div class="lens-col">
+          <div class="lens-num brass">LENS III · ANTHROPOLOGICAL</div>
+          <h3>Cultural Fluency &amp; Trust</h3>
+          <p>Every agency, caucus, region, and international partner operates on unwritten rules. We apply an anthropological lens to help clients read different cultures and build relationships that last.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 4: LEADERSHIP & INTERACTIVE ROTATING GLOBE (DARK COMMAND NAVY) -->
+  <section id="leadership" class="section-globe">
+    <div class="container">
+      <div class="founder-intro-row">
+        <div class="founder-intro-copy">
+          <p class="eyebrow brass">03 · Leadership &nbsp;·&nbsp; Global Perspective</p>
+          <h2 class="section-title">A perspective earned across latitudes—and on both sides of the aisle.</h2>
+          <p>
+            Strategic Latitudes was founded by <strong>Matt Hickey</strong> on a straightforward premise: you cannot understand how geography and power interact from behind a desk alone. Explore the places and chapters that shaped how we read terrain, institutions, and human culture.
+          </p>
+        </div>
+
+        <div class="founder-portrait-mini">
+          <div class="mini-avatar">
+            <img src="assets/logo-original-dark.png" alt="Matt Hickey portrait slot" />
+          </div>
+          <div>
+            <p class="mini-name">Matt Hickey</p>
+            <p class="mini-role">Founder &amp; Principal · Washington, D.C.</p>
+            <p class="mini-note">Portrait photography slot</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="globe-stage">
+        <!-- Left: 5 Interactive Chapters -->
+        <div class="globe-chapter-list" id="globeChapterList" aria-label="Founder career chapters"></div>
+
+        <!-- Right: Interactive Orthographic Cartographic Globe -->
+        <div class="globe-viewport">
+          <div class="globe-telemetry">
+            <span class="tel-name" id="globeActiveName">Fort Richardson, AK</span>
+            <span class="tel-coord" id="globeCoordReadout">61.26° N · 149.68° W</span>
+          </div>
+          <div class="globe-canvas-wrap">
+            <canvas id="slGlobeCanvas" aria-label="Interactive rotating globe showing Strategic Latitudes locations"></canvas>
+          </div>
+          <div class="globe-caption">
+            <span>Drag globe to rotate · Select any location</span>
+            <span>Orthographic Projection</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 5: WHO WE ADVISE (CAPITOL DUSK PLATE + HAIRLINE COLUMNS) -->
+  <section id="who-we-advise" class="section-washington">
+    <div class="dc-banner">
+      <div class="container">
+        <p class="eyebrow brass">04 · Who We Advise &nbsp;·&nbsp; 38°53′23″ N · 77°00′32″ W</p>
+        <h2 class="section-title">Bridging federal institutions and the organizations working with them.</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="audience-ledger">
+        <div class="aud-col">
+          <div class="aud-tag">Public Sector</div>
+          <h3>Federal Agencies &amp; Executive Leaders</h3>
+          <p>Unfiltered geographic, cultural, and stakeholder counsel for senior agency teams navigating complex regional corridors, resource dependencies, and interagency alignment.</p>
+        </div>
+        <div class="aud-col">
+          <div class="aud-tag">Capitol Hill</div>
+          <h3>U.S. Senate &amp; House Offices</h3>
+          <p>Bipartisan strategic perspective grounded in real geography, appropriations dynamics, and institutional history—built to serve both sides of the aisle without partisan noise.</p>
+        </div>
+        <div class="aud-col">
+          <div class="aud-tag">Commercial &amp; Advisory</div>
+          <h3>Companies Selling Into &amp; Advising Government</h3>
+          <p>Helping defense, energy, infrastructure, technology, and consulting teams decode federal culture, anticipate institutional friction, and build relationships that outlast a single cycle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 6: HOW WE WORK + SUBSTACK DISPATCHES -->
+  <section id="dispatches" class="section-dispatches">
+    <div class="container">
+      <p class="eyebrow">05 · How We Work</p>
+      <h2 class="section-title">Disciplined reconnaissance before any move.</h2>
+
+      <div class="cadence-row">
+        <div class="step-col">
+          <div class="step-num">STEP 01</div>
+          <h4>Map the Terrain</h4>
+          <p>Assess the geography, historical context, resource flows, and competing interests shaping the environment before setting a position.</p>
+        </div>
+        <div class="step-col">
+          <div class="step-num">STEP 02</div>
+          <h4>Read the Room</h4>
+          <p>Identify the leaders, parties, cultural codes, and institutional incentives—clarifying where leverage lives and when to press or concede.</p>
+        </div>
+        <div class="step-col">
+          <div class="step-num">STEP 03</div>
+          <h4>Build Durable Alignment</h4>
+          <p>Equip your team with direct senior counsel to cultivate trust across federal offices, agencies, and commercial or regional partners.</p>
+        </div>
+      </div>
+
+      <div class="substack-band">
+        <div>
+          <p class="eyebrow brass">Field Dispatches · Substack</p>
+          <h3>Essays on geography, power, and the human side of statecraft.</h3>
+          <p>
+            Follow Matt Hickey’s ongoing dispatches on Substack—exploring resource corridors, high-latitude geopolitics, congressional dynamics, and the cultural anthropology behind how real decisions get made.
+          </p>
+          <a href="https://strategiclatitudes.substack.com" target="_blank" rel="noopener" class="btn btn-outline" style="padding:12px 22px;font-size:14px;">
+            Read &amp; Subscribe on Substack ↗
+          </a>
+        </div>
+
+        <div class="dispatch-list" aria-label="Sample dispatch themes">
+          <div class="dispatch-item">
+            <div class="dispatch-meta">Corridors &amp; Resources</div>
+            <p class="dispatch-title">Why Geography Still Sets the Agenda in Washington</p>
+          </div>
+          <div class="dispatch-item">
+            <div class="dispatch-meta">Negotiation &amp; Timing</div>
+            <p class="dispatch-title">When to Hold Firm and When to Move Forward: Denali to the Hill</p>
+          </div>
+          <div class="dispatch-item">
+            <div class="dispatch-meta">Applied Anthropology</div>
+            <p class="dispatch-title">Speaking the Room’s Real Language Across Agencies and Cultures</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 7: GET IN TOUCH -->
+  <section id="contact" class="section-contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <p class="eyebrow">06 · Get in Touch</p>
+        <h2 class="section-title">Start a confidential conversation.</h2>
+        <p>
+          Every durable outcome begins with an honest look at the terrain. Reach out directly to discuss an advisory engagement, congressional or agency briefing, or speaking inquiry.
+        </p>
+        <div class="contact-links">
+          <span>Washington, D.C. &nbsp;·&nbsp; 38.8899° N, 77.0091° W</span>
+          <span>Email: <a href="mailto:contact@strategiclatitudes.com">contact@strategiclatitudes.com</a></span>
+          <span>Writing: <a href="https://strategiclatitudes.substack.com" target="_blank" rel="noopener">Strategic Latitudes on Substack ↗</a></span>
+        </div>
+      </div>
+
+      <form class="contact-form" id="inquiryForm">
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your full name" required />
+          </div>
+          <div class="field">
+            <label for="org">Organization or Office</label>
+            <input id="org" name="org" type="text" placeholder="Agency, Office, or Company" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="name@organization.com" required />
+          </div>
+          <div class="field">
+            <label for="topic">Area of Interest</label>
+            <select id="topic" name="topic">
+              <option>Federal / Agency Advisory</option>
+              <option>Congressional &amp; Bipartisan Strategy</option>
+              <option>GovCon / Corporate Advisory</option>
+              <option>Briefing or Speaking Request</option>
+              <option>Other Inquiry</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="message">Brief Context</label>
+          <textarea id="message" name="message" placeholder="Share a quick overview of the terrain or decision you're navigating..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;padding:13px 20px;font-size:14px;">
+          Send Inquiry
+        </button>
+        <p class="form-note">All inquiries are treated in strict confidence.</p>
+        <div class="form-success" id="formSuccess">
+          Thank you — your message has been captured for Matt Hickey.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <a href="#top" class="brand-lockup" aria-label="Back to top">
+        <img src="assets/logo-globe-mark.png" alt="Strategic Latitudes globe" style="height:32px;" />
+        <span class="brand-wordmark">
+          <span class="w-top" style="font-size:18px;">strategic</span>
+          <span class="w-bot" style="font-size:16px;">latitudes</span>
+        </span>
+      </a>
+      <div class="footer-meta">
+        <a href="https://strategiclatitudes.substack.com" target="_blank" rel="noopener" style="color:var(--meridian);">Substack ↗</a>
+        <a href="#contact" style="color:#C3D5E6;">Get in Touch</a>
+        <span>© 2026 Strategic Latitudes · Washington, D.C.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Offline-ready Natural Earth continents + interactive orthographic globe -->
+  <script src="assets/world-land.js"></script>
+  <script src="assets/globe-experience.js"></script>
+  <script>
+    (function () {
+      var menuBtn = document.getElementById('mobileMenuBtn');
+      var drawer = document.getElementById('mobileDrawer');
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', function () {
+          var open = drawer.classList.toggle('is-open');
+          menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        drawer.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            drawer.classList.remove('is-open');
+            menuBtn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      var form = document.getElementById('inquiryForm');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          document.getElementById('formSuccess').style.display = 'block';
+          this.reset();
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

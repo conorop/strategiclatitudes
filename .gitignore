@@ -1,0 +1,13 @@
+.DS_Store
+.agents/
+.gemini/
+mockups/
+assets/01-logo-refinements.png
+assets/02-direction-b-mockup.png
+assets/03-direction-c-mockup.png
+assets/brand-discovery-board.png
+assets/landing-preview-*.png
+assets/logo-original.png
+assets/v2-*.png
+assets/v3-*.png
+assets/v4-*.png
